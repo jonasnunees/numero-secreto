@@ -64,3 +64,32 @@ git push -u origin main
 ```
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
+
+### Listar repositórios remotos:
+
+```
+git remote -v
+
+// a saída será algo semelhante a:
+origin   https://github.com/seu-usuario/seu-projeto.git (fetch)
+origin   https://github.com/seu-usuario/seu-projeto.git (push)
+```
+
+### Remover um repositório remoto
+
+```
+git remote remove origin
+```
+
+### Alterar a URL de um repositório remoto
+
+```
+// exemplo
+git remote set-url origin https://github.com/seu-usuario/seu-repositorio.git
+```
+
+### Renomear um repositório remoto
+
+```
+git remote rename origin novo-origin
+```
