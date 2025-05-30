@@ -1,0 +1,11 @@
+// GitHub -> Plataforma onde hospedamos o código
+// Git -> Ferramenta onde fazemos o controle de versões do código
+
+// converter o diretório do computador em um repositório Git
+git init
+
+obs.: caso não tenha certeza que o diretório já tenha sido convertido para um repositório Git, execute o comando git status.
+Se aparecer a mensagem fatal: not a git repository (or any of the parent directories): .git, isso significa que o diretório atual não é um repositório Git e você pode então executar o comando git init.
+
+// adicionar todos os arquivos no repositório Git
+git add .
