@@ -1,6 +1,12 @@
 # GitHub -> Plataforma onde hospedamos o código
 # Git -> Ferramenta onde fazemos o controle de versões do código
 
+## As mensagens dos commits devem ser simples e objetivas. A seguir, listamos algumas orientações para isso:
+
+- Mantenha a mensagem curta e concisa: A primeira linha da mensagem deve conter, no máximo, 72 caracteres. Caso seja necessário uma descrição adicional, você deve pular uma linha e adicionar os detalhes, como o contexto, da mudança realizada.
+- Uso de verbo no infinitivo: É comum que a mensagem do commit inicie com um verbo no infinitivo que descreva a alteração feita, como “adicionar”, “corrigir” ou “atualizar”. Em sequência, são adicionados detalhes concisos da mudança. Por exemplo: “Atualizar texto do título da página”.
+- Evite detalhes técnicos: Não inclua detalhes técnicos complexos na mensagem de commit. Esses detalhes podem ser adicionados nos comentários de código ou na documentação.
+
 ### converter o diretório do computador em um repositório Git
 
 ```
@@ -92,4 +98,27 @@ git remote set-url origin https://github.com/seu-usuario/seu-repositorio.git
 
 ```bash
 git remote rename origin novo-origin
+```
+
+### Mostra o histórico de commits do repositório com detalhes como hash, autor, data e mensagem
+
+```bash
+git log
+```
+
+### O Git oferece a possibilidade de adicionar mais de um autor a um commit. Para isso, após escrever a mensagem do commit, pulamos duas linhas e usamos a palavra-chave Co-authored-by:, seguido do nome e e-mail associado ao GitHub (entre < >) de cada pessoa colaboradora.
+> Cada coautor deve estar em uma linha diferente, como é mostrado no exemplo a seguir:
+
+```bash
+$ git commit -m "Adicionar nova funcionalidade.
+>
+>
+Co-authored-by: NOME <nome@email.com>
+Co-authored-by: OUTRO-NOME <outro@email.com>"
+```
+
+### Comando para baixar os commits do repositório remoto para o repositório local
+
+```bash
+git pull origin main
 ```
